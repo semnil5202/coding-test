@@ -1,33 +1,23 @@
-const readline = require('readline');
+// https://www.acmicpc.net/problem/2839
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+let input = require('fs').readFileSync('/dev/stdin').toString();
 
-rl.on('line', function(line) {
+let weight = +input;
+let count = 0;
 
-  let weight = +line;
-  let count = 0;
-
-  while (true) {
-    if (weight % 5 === 0) {
-      count += (weight / 5);
+while (true) {
+  if (weight % 5 === 0) {
+    count += (weight / 5);
+    break;
+  }
+  else {
+    if (weight < 0) {
+      count = -1;
       break;
     }
-    else {
-      if (weight < 0) {
-        count = -1;
-        break;
-      }
-      weight -= 3;
-      count++;
-    }
+    weight -= 3;
+    count++;
   }
+}
 
-  console.log(count);
-
-  rl.close();
-}).on("close", function() {
-  process.exit();
-});
+console.log(count);
