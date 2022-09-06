@@ -1,4 +1,4 @@
-entrypoint = "init/readline.js"
+entrypoint = "Greedy/2839_설탕배달.js"
 
 hidden = [".config"]
 
