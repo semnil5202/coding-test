@@ -1,4 +1,4 @@
-entrypoint = "Greedy/11399_ATM.js"
+entrypoint = "Greedy/11047_동전0.js"
 
 hidden = [".config"]
 
