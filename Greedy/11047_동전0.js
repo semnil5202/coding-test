@@ -10,6 +10,7 @@ for (let i = coinType.length - 1; i > 1; i--) {
     let max = +coinType[i];
     count = count + parseInt(coinSum / max);
     coinSum = parseInt(coinSum % max);
+    
     if ( coinSum === 0 ) { break; }
   }
 }
