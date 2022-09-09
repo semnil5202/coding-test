@@ -1,3 +1,5 @@
+//https://www.acmicpc.net/problem/2750
+
 const input = require("fs")
   .readFileSync("./INPUT.txt")
   .toString()
@@ -19,6 +21,6 @@ function oneValuePerLine(arr) {
   }
 }
 
-const inputCopyed = deepCopy(input);
-useSortFunc(inputCopyed);
-oneValuePerLine(inputCopyed);
+const inputCopied = deepCopy(input);
+useSortFunc(inputCopied);
+oneValuePerLine(inputCopied);
