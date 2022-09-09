@@ -1,4 +1,4 @@
-entrypoint = "Greedy/11047_동전0.js"
+entrypoint = "Sorting/2750_수정렬하기.js"
 
 hidden = [".config"]
 
