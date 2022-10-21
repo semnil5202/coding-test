@@ -6,18 +6,28 @@ const [n, arrN, m, arrM] = require("fs")
   .trim()
   .split("\n");
 
-const standard = arrN.split(" ");
-const comparison = arrM.split(" ");
-let str = "";
+let res = "";
+const standard = arrN
+  .split(" ")
+  .map((i) => Number(i))
+  .sort((a, b) => a - b);
+const comparison = arrM.split(" ").map((i) => Number(i));
 
-for (let i = 0; i < comparison.length; i++) {
-  let count = 0;
-  for (let j = 0; j < standard.length; j++) {
-    if (+comparison[i] === +standard[j]) {
-      count++;
-    }
+function binarySearch(arr, target, start, end) {
+  while (start <= end) {
+    let mid = Math.floor((start + end) / 2);
+
+    if (arr[mid] === target) return mid; //
+    else if (arr[mid] > target) end = mid - 1; //
+    else start = mid + 1;
   }
-  str += count + "\n";
+  return -1;
 }
 
-console.log(str);
+for (let i = 0; i < comparison.length; i++) {
+  let result = binarySearch(standard, comparison[i], 0, standard.length - 1);
+
+  result !== -1 ? (res += "1\n") : (res += "0\n");
+}
+
+console.log(res);
