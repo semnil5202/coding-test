@@ -7,7 +7,8 @@ const rl = readline.createInterface({
 });
 
 rl.on("line", function (line) {
-  console.log(line);
+  console.log(line); // 입력 받은 값 출력
+  // 코드 작성
 
   rl.close();
 }).on("close", function () {
@@ -27,6 +28,8 @@ let input = [];
 rl.on("line", function (line) {
   input.push(line);
 }).on("close", function () {
-  console.log(input);
+  console.log(input); // 입력 받은 값 출력
+  // 코드 작성
+
   process.exit();
 });
