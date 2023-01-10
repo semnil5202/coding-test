@@ -29,7 +29,7 @@ class Queue {
   }
 
   deQueue() {
-    const value = this.start.value;
+    const value = this.start;
 
     if (this.start === null) return null;
     if (this.start === this.end) this.end = null;
